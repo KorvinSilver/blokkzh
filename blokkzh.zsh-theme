@@ -1,4 +1,4 @@
-# ZSH Theme - TODO: Preview
+# ZSH Theme - Preview: https://raw.githubusercontent.com/KorvinSilver/blokkzh/master/preview.png
 # Mod of the gnzh theme
 
 setopt prompt_subst(){
