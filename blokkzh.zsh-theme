@@ -1,9 +1,7 @@
 # ZSH Theme - TODO: Preview
 # Mod of the gnzh theme
 
-setopt prompt_subst
-
-() {
+setopt prompt_subst(){
 
 local PR_USER PR_USER_OP PR_PROMPT PR_HOST PR_AT
 
@@ -56,4 +54,3 @@ ZSH_THEME_VIRTUALENV_PREFIX="─[%F{green}"
 ZSH_THEME_VIRTUALENV_SUFFIX="%f]"
 
 }
-
