@@ -1,7 +1,9 @@
 # ZSH Theme - Preview: https://raw.githubusercontent.com/KorvinSilver/blokkzh/master/preview.png
 # Mod of the gnzh theme
 
-setopt prompt_subst(){
+setopt prompt_subst
+
+(){
 
 local PR_USER PR_USER_OP PR_PROMPT PR_HOST PR_AT
 
