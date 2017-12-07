@@ -16,7 +16,7 @@ setopt prompt_subst
         promptSymbolFrom='|-'
         promptSymbolTo='|-'
         promptSymbol='>'
-        rvmSymbol='rvm'
+        rvmSymbol='%F{red}rvm%f'
         ZSH_THEME_GIT_PROMPT_PREFIX='-[%F{yellow}git '
         ZSH_THEME_GIT_PROMPT_SUFFIX='%f]'
         ZSH_THEME_VIRTUALENV_PREFIX='-[%F{green}python '
@@ -26,7 +26,7 @@ setopt prompt_subst
         promptSymbolFrom='┌─'
         promptSymbolTo='└─'
         promptSymbol='➤'
-        rvmSymbol='🔻'
+        rvmSymbol='%F{red}🔻%f'
         ZSH_THEME_GIT_PROMPT_PREFIX='─[%F{yellow} '
         ZSH_THEME_GIT_PROMPT_SUFFIX='%f]'
         ZSH_THEME_VIRTUALENV_PREFIX='─[%F{green}🐍 '
@@ -65,11 +65,11 @@ setopt prompt_subst
     local current_dir="%B%F{blue}%~%f%b"
     local rvm_ruby=''
     if ${HOME}/.rvm/bin/rvm-prompt &> /dev/null; then # detect user-local rvm installation
-        rvm_ruby="─[${rmvSymbol} %F{red}$(${HOME}/.rvm/bin/rvm-prompt i v g s)%f]"
+        rvm_ruby='─['${rvmSymbol}' %F{red}$(${HOME}/.rvm/bin/rvm-prompt i v g s)%f]'
     elif which rvm-prompt &> /dev/null; then # detect system-wide rvm installation
-        rvm_ruby="─[${rvmSymbol} %F{red}$(rvm-prompt i v g s)%f]"
+        rvm_ruby='─['${rvmSymbol}' %F{red}$(rvm-prompt i v g s)%f]'
     elif which rbenv &> /dev/null; then # detect Simple Ruby Version Management
-        rvm_ruby="─[${rvmSymbol} %F{red}$(rbenv version | sed -e "s/ (set.*$//")%f]"
+        rvm_ruby='─['${rvmSymbol}' %F{red}$(rbenv version | sed -e "s/ (set.*$//")%f]'
     fi
 
     local git_branch='$(git_prompt_info)'
