@@ -13,8 +13,8 @@ setopt prompt_subst
     if [[ ${TERM} == "linux" ]];
     then
         returnSymbol='<<'
-        promptSymbolFrom='|-'
-        promptSymbolTo='|-'
+        promptSymbolFrom='/-'
+        promptSymbolTo='\-'
         promptSymbol='>'
         rvmSymbol='%F{red}rvm%f'
         ZSH_THEME_GIT_PROMPT_PREFIX='-[%F{yellow}git '
