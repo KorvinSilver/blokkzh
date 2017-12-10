@@ -28,20 +28,22 @@ then
     read -q "keyInpt?Use sudo? [y/N] "
     echo ""
 else
-    curl -o "$1/blokkzh.zsh-theme" "https://raw.githubusercontent.com/KorvinSilver/blokkzh/master/blokkzh.zsh-theme"
+    mkdir -p $1/themes
+    curl -o "$1/themes/blokkzh.zsh-theme" "https://raw.githubusercontent.com/KorvinSilver/blokkzh/master/blokkzh.zsh-theme"
 fi
 
 # Download theme using sudo or exit
 if [[ $keyInpt == "y" || $keyInpt == "Y" ]];
 then
-    sudo curl -o "$1/blokkzh.zsh-theme" "https://raw.githubusercontent.com/KorvinSilver/blokkzh/master/blokkzh.zsh-theme"
+    sudo mkdir -p $1/themes
+    sudo curl -o "$1/themes/blokkzh.zsh-theme" "https://raw.githubusercontent.com/KorvinSilver/blokkzh/master/blokkzh.zsh-theme"
 else
     echo "Exiting..."
     exit
 fi
 
 # Exit if the theme file didn't get downloaded
-if [[ ! -f "$1/blokkzh.zsh-theme" ]];
+if [[ ! -f "$1/themes/blokkzh.zsh-theme" ]];
 then
     echo "Something went wrong..."
     echo "Exiting..."
