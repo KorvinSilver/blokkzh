@@ -23,7 +23,7 @@ Alternatively, you can execute this command:
 
 ### [Zgen](https://github.com/tarjoilija/zgen)
 
-Add `zgen load KorvinSilver/blokkzh` to your .zshrc file in the same function you're doing your other `zgen load` calls in. Zgen will handle automatically cloning the plugin for you the next time you do a `zgen save`.
+Add `zgen load KorvinSilver/blokkzh` to your `.zshrc` file in the same function you're doing your other `zgen load` calls in. Zgen will handle automatically cloning the plugin for you the next time you do a `zgen save`.
 
 ## Screenshots
 
