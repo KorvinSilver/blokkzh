@@ -38,8 +38,11 @@ then
     sudo mkdir -p $1/themes
     sudo curl -o "$1/themes/blokkzh.zsh-theme" "https://raw.githubusercontent.com/KorvinSilver/blokkzh/master/blokkzh.zsh-theme"
 else
-    echo "Exiting..."
-    exit
+    if (( ${+keyInpt} ));
+    then
+        echo "Exiting..."
+        exit
+    fi
 fi
 
 # Exit if the theme file didn't get downloaded
